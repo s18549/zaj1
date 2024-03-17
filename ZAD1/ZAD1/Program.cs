@@ -18,15 +18,9 @@ public class Program
             throw new ArgumentException("Tablica liczb nie może być pusta.");
 
         int sum = 0;
-<<<<<<< HEAD
         foreach (int numerek in numbers)
         {
             sum += numerek;
-=======
-        foreach (int nume in numbers)
-        {
-            sum += nume;
->>>>>>> feature-new
         }
 
         return (double)sum / numbers.Length;
