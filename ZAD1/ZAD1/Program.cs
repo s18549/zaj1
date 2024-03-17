@@ -7,6 +7,9 @@ public class Program
         int[] numbers = { 5, 10, 15, 20, 25 };
         double average = CalculateAverage(numbers);
         Console.WriteLine("Średnia: " + average);
+
+        int max = FindMaxValue(numbers);
+        Console.WriteLine("Maksymalna wartość: " + max);
     }
 
     public static double CalculateAverage(int[] numbers)
@@ -21,5 +24,22 @@ public class Program
         }
 
         return (double)sum / numbers.Length;
+    }
+
+    public static int FindMaxValue(int[] numbers)
+    {
+        if (numbers == null || numbers.Length == 0)
+            throw new ArgumentException("Tablica liczb nie może być pusta.");
+
+        int max = numbers[0];
+        foreach (int num in numbers)
+        {
+            if (num > max)
+            {
+                max = num;
+            }
+        }
+
+        return max;
     }
 }
